@@ -1,5 +1,5 @@
 class Libslirp < Formula
-  desc "A TCP-IP emulator as a library"
+  desc "TCP-IP emulator as a library"
   homepage "https://github.com/rd235/libslirp"
 
   head do
@@ -20,6 +20,11 @@ class Libslirp < Formula
                           "--prefix=#{prefix}"
     system "make", "install"
     (lib/"pkgconfig").install "slirp.pc"
+  end
+
+  # to be fixed
+  test do
+    system "true"
   end
 end
 
